@@ -57,3 +57,18 @@ recognition.addEventListener('result', e => { //we listen for result and when we
 
 //why is this making the browser to add a new paragraph instead of overwriting the existing?
 //recognition.addEventListener('end', recognition.start); //when the function ends we want it to start again so that we get more paragraphs
+
+//added buttons with language
+const english = document.querySelector('.eng');
+const swedish = document.querySelector('.sve');
+
+function changeLangEn() {
+    recognition.lang = 'en-US';
+};
+
+function changeLangSv() {
+    recognition.lang = 'Ru';
+};
+
+english.addEventListener('click', changeLangEn);
+swedish.addEventListener('click', changeLangSv);
